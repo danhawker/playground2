@@ -14,4 +14,4 @@
     state: present
     activationkey: "{{ satellite_activationkey }}"
     org_id: "{{ satellite_orgid}}"
-  when: katello_bootstrap_installed
+#  when: katello_bootstrap_installed
