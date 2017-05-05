@@ -1,0 +1,8 @@
+---
+# defaults file for icndb
+
+# ICNDB repo
+icndb_repo_url: "https://github.com/danhawker/nodejs-icndb"
+
+# ICNDB Home
+icndb_home: "/opt/icmdb/"

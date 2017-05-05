@@ -1,0 +1,5 @@
+---
+- name: Ensure MotD is properly set 
+  template:
+    src: motd.j2
+    dest: /etc/motd

@@ -1,0 +1,7 @@
+---
+# defaults file for satellite
+
+# Default Activation Key (RHEL Server 7)
+satellite_activationkey: "ak_mi_server7"
+# Default Organisation ID (ARM)
+satellite_orgid: "ARM"

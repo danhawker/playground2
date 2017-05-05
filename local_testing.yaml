@@ -1,0 +1,7 @@
+---
+# Test Playbook
+
+- name: Run test
+  hosts: arm-mi
+#  roles:
+#    - myrole

@@ -1,0 +1,7 @@
+---
+# Subscribe a host to satellite
+
+- name: Subscribe Host to Satellite
+  hosts: all
+  roles:
+    - satellite

@@ -1,0 +1,4 @@
+[arm-mi]
+
+#rh-tower.mi.arm.com ansible_host=10.6.43.221 ansible_user=root
+ansible01.mi.arm.com ansible_user=root

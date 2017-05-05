@@ -1,0 +1,11 @@
+---
+# Quick playbook to Install ICNDB Joke Server
+- name: Install and Setup ICNDB
+  hosts: icndb
+  gather_facts: no
+  roles:
+  - nodejs
+  - icndb
+#  tasks:
+#  - name: Ping Host
+#    ping:

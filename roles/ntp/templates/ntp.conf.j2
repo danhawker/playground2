@@ -1,0 +1,6 @@
+restrict default kod nomodify notrap nopeer noquery
+server {{ ntp_server_primary }} prefer
+server {{ ntp_server_secondary }}
+restrict 127.0.0.1
+fudge {{ ntp_server_secondary }} stratum 10
+driftfile /var/lib/ntp/drift

@@ -1,0 +1,32 @@
+---
+# tasks file for icndb
+
+# Create base directory
+- name: Ensure base directory exists for ICNDB
+  file:
+      path: "{{ icndb_home }}"
+      state: directory
+      owner: root
+      mode: 0755
+
+- name: Pull sources from Github
+  git:
+    repo: "{{ icndb_repo_url }}"
+    ssh_opts: "-o StrictHostKeyChecking=no"
+    dest: "{{ icndb_home }}"
+#    version: "{{ repo_version }}"
+
+- name: Install Dependencies via NPM
+  npm:
+    path: "{{ icndb_home }}"
+
+- name: Copy Systemd unit file
+  template:
+    src: icndb-service.j2
+    dest: /etc/systemd/system/icndb-service.service
+
+- name: Start ICNDB
+  systemd:
+    state: started
+    name: ICNDB Daemon
+    daemon_reload: yes

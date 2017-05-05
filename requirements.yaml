@@ -1,0 +1,6 @@
+---
+# Grab required roles
+
+# nginx from Galaxy
+- src: geerlingguy.nodejs
+  name: nodejs    

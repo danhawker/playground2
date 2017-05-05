@@ -1,0 +1,24 @@
+---
+- name: Ensure that NTP is installed
+  yum:
+    name: ntpdate
+    state: present
+
+- name: Ensure the NTP configuration is right
+  template:
+    src: ntp.conf.j2
+    dest: /etc/ntp.conf
+  notify: Restart NTPd
+
+- name: Ensure the driftfile is present
+  file:
+    name: /var/lib/ntp/drift
+    state: touch
+    owner: ntp
+    group: ntp
+
+- name: Ensure the NTP service is running and enabled
+  service:
+    name: ntpd
+    state: started
+    enabled: True
