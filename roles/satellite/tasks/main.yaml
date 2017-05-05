@@ -6,7 +6,7 @@
   yum:
     name: "http://satellite.mi.arm.com/pub/katello-ca-consumer-latest.noarch.rpm"
     state: present
-  register: katello_bootstrap_installed
+#  register: katello_bootstrap_installed
 
 # Subscribe to Satellite using subscription-manager
 - name: Subscribe {{ ansible_hostname }} to Satellite
