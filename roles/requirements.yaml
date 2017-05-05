@@ -3,4 +3,4 @@
 
 # nginx from Galaxy
 - src: geerlingguy.nodejs
-  name: nodejs    
+  name: nodejs
