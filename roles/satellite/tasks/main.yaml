@@ -2,10 +2,10 @@
 # tasks file for satellite
 
 # Install Katello Bootstrap RPM
-#- name: Install katello-ca-consumer-latest Bootstrap RPM
-#  yum:
-#    name: "http://satellite.mi.arm.com/pub/katello-ca-consumer-latest.noarch.rpm"
-#    state: present
+- name: Install katello-ca-consumer-latest Bootstrap RPM
+  yum:
+    name: "http://satellite.mi.arm.com/pub/katello-ca-consumer-latest.noarch.rpm"
+    state: present
 #  register: katello_bootstrap_installed
 
 # Subscribe to Satellite using subscription-manager
