@@ -28,10 +28,10 @@
       state: present
       key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCg2Tu2N70GXRXTqJVhRuAJaR5of8s+G8JLrR7XrQOkOgldCMVb8ShJWq3YteYsnWZh0bGB5ZQwYpz9Vyo5ZITGS1Ynys1TGB0DF958K3Mldzy28t2IIYbaEtvpdMdb+C9JUocO5OBfV/4Teh1DT8+waVgznbtrBNDWe+ttE1TwLlpklEbyhn+Q6TMP97bUw++dYeUIi2816HwokcbY/06plMytw4s1753Ge8cpVVKGsUig7zVzNRaDFj5yGc49Caysp1N8sIcEYB/6Up5Y517EzRLrjnOQI4qEwCHPzid+1ny4WggeBs/XN3zAoHwQmmKptVNO/QkkScmncuaS+tBd Ansible Tower SSH Key"
 
-- name: Allow 'ansible' user to have passwordless sudo
-  lineinfile:
-    dest: /etc/sudoers
-    state: present
-    regexp: '^ansible'
-    line: 'ansible ALL=(ALL) NOPASSWD: ALL'
-    validate: visudo -cf %s
+  - name: Allow 'ansible' user to have passwordless sudo
+    lineinfile:
+      dest: /etc/sudoers
+      state: present
+      regexp: '^ansible'
+      line: 'ansible ALL=(ALL) NOPASSWD: ALL'
+      validate: visudo -cf %s
