@@ -4,6 +4,7 @@
 - name: Prepare Hosts for Ansible
   hosts: all
   gather_facts: no
+  ansible_become: true
   tasks:
   # Create Ansible Group
   - name: Create Ansible Group
