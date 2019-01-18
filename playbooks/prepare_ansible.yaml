@@ -27,7 +27,7 @@
     authorized_key:
       user: ansible
       state: present
-      key: "{ansible_user_public_ssh_key}"
+      key: "{{ ansible_user_public_ssh_key }}"
 
   - name: Allow 'ansible' user to have passwordless sudo
     lineinfile:
