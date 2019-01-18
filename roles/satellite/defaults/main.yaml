@@ -2,6 +2,8 @@
 # defaults file for satellite
 
 # Default Activation Key (RHEL Server 7)
-satellite_activationkey: "ak_mi_server7"
-# Default Organisation ID (ARM)
-satellite_orgid: "ARM"
+satellite_activationkey: "ak_pvio_server7"
+# Default Organisation ID
+satellite_orgid: "PV.IO"
+# Katello RPM Download curl
+satellite_katello_rpm: "http://satellite.portalvein.io/pub/katello-ca-consumer-latest.noarch.rpm"

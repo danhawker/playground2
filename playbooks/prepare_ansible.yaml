@@ -18,15 +18,15 @@
       comment: "Ansible User"
       group: "ansible"
       generate_ssh_key: yes
-      ssh_key_bits: 2048
-      ssh_key_file: .ssh/id_rsa
+      ssh_key_bits: 256
+      ssh_key_file: .ssh/id_ecdsa
 
   # Copy SSH Key
   - name: Copy SSH Ansible Key
     authorized_key:
       user: ansible
       state: present
-      key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCg2Tu2N70GXRXTqJVhRuAJaR5of8s+G8JLrR7XrQOkOgldCMVb8ShJWq3YteYsnWZh0bGB5ZQwYpz9Vyo5ZITGS1Ynys1TGB0DF958K3Mldzy28t2IIYbaEtvpdMdb+C9JUocO5OBfV/4Teh1DT8+waVgznbtrBNDWe+ttE1TwLlpklEbyhn+Q6TMP97bUw++dYeUIi2816HwokcbY/06plMytw4s1753Ge8cpVVKGsUig7zVzNRaDFj5yGc49Caysp1N8sIcEYB/6Up5Y517EzRLrjnOQI4qEwCHPzid+1ny4WggeBs/XN3zAoHwQmmKptVNO/QkkScmncuaS+tBd Ansible Tower SSH Key"
+      key: "{ansible_user_public_ssh_key}"
 
   - name: Allow 'ansible' user to have passwordless sudo
     lineinfile:

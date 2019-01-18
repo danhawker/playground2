@@ -2,6 +2,6 @@
 # Test Playbook
 
 - name: Run test
-  hosts: arm-mi
+  hosts: local
 #  roles:
 #    - myrole
